@@ -12,7 +12,9 @@ export default {
       colors: {
         bg: "#F0F1F3",
         textColor: '#111',
-        secondary:"#646464"
+        secondary: "#646464",
+        LightYellow: '#eab308',
+        LightBlue: '#1e3a8a',
       }
     },
   },

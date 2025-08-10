@@ -5,3 +5,9 @@
 .heading{
     @apply text-2xl text-textColor font-medium
 }
+
+.custom-date-input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  /* display: none; */
+  cursor: pointer;
+}

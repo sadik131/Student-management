@@ -98,3 +98,33 @@ export const StudentDetails =
   Address: "House #10, Road #6, Australia",
   Phone: "+ 88 98568888418",
 }
+
+export const Gender = [
+    "Male",
+    "Female",
+    "Other"
+]
+
+export const Religion = [
+    "Islam",
+    "Hindu",
+    "Christian",
+    "Buddhist",
+    "Other"
+]
+
+export const Blood = [
+    "A",
+    "A+",
+    "B",
+    "B+",
+    "O",
+    "O+"
+]
+
+export const section = [
+    "pink",
+    "blue",
+    "green",
+    "yellow",
+]

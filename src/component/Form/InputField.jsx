@@ -1,14 +1,14 @@
 
-function Input({ lable, type, placeholder, bgColor="bg-bg", value , padding="px-4 py-3" }) {
+function Input({ lable, type, placeholder, bgColor="bg-bg", value , padding="px-4" }) {
     return (
-        <div className=' w-full md:px-4 md:mb-6'>
+        <div className={`w-full md:${padding} md:mb-6`}>
             <label className="block mb-2 text-base font-normal text-secondary">{lable}</label>
             <input
                 value={value}
                 type={type}
                 placeholder={placeholder}
                 onChange={() => {}}
-                className={`${bgColor} w-full ${padding} rounded-md focus:outline-none`}
+                className={`${bgColor} w-full px-4 py-3 rounded-md focus:outline-none`}
             />
         </div>
     )
