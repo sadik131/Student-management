@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 function Sidebar() {
     const [toggle, setToggle] = useState(true);
     const [mobile, setMobile] = useState(false);
-    const [showSubmenu, setShowSubmenu] = useState(true);
+    const [showSubmenu, setShowSubmenu] = useState(false);
     const [showStudentSubmenu, setShowStudentSubmenu] = useState(false);
 
 
@@ -71,7 +71,7 @@ function Sidebar() {
                     <div className="flex flex-col gap-1 text-sm w-full">
                         <Link to={"/add-teacher"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' /> Add Teacher</Link>
                         <Link to={"/all-teacher"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' /> All Teachers</Link>
-                        <Link to={"/teacherDetails"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' />Teacher Details</Link>
+                        <Link to={"/teacher-details"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' />Teacher Details</Link>
                         <Link to={"/payment"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' />Payment</Link>
                     </div>
                 )}
@@ -79,10 +79,12 @@ function Sidebar() {
 
             {/* mobile */}
             <div className={`flex lg:hidden flex-col items-start text-white ${mobile ? "" : "hidden"}`}>
-                <div className={`w-full cursor-pointer ${toggle && "px-6 border-b border-black"} py-3 flex justify-between items-center`}>
+                <div className={`w-full cursor-pointer ${toggle && "px-6 border-b border-black"} py-3 flex justify-between items-center`}
+                    onClick={() => setShowStudentSubmenu(!showStudentSubmenu)}
+                >
                     <span className={`flex ${!toggle && "justify-center"} w-full gap-4`}>
                         <MdDashboard className='text-xl' />
-                        {toggle && <Link to={"/"} className='text-sm font-semibold'>Dashboard</Link>}
+                        {toggle && <Link to={"/"} className='text-sm font-semibold'>Student</Link>}
                     </span>
                     {toggle && <FaAngleRight />}
                 </div>

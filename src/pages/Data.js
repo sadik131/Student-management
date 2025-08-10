@@ -128,3 +128,26 @@ export const section = [
     "green",
     "yellow",
 ]
+
+export const session =[
+  "2017-2018",
+  "2018-2019",
+  "2019-2020",
+  "2020-2021",
+]
+
+export const TeacherDetails = {
+  Name: "Steven Johnson",
+  Gender: "Male",
+  "Father Name": "Steve Jones",
+  "Mother Name": "Naomi Rose",
+  Religion: "Islam",
+  "Joining Date": "07.08.2016",
+  "E-mail": "stevenjohnson@gmail.com",
+  Subject: "English",
+  Class: "2",
+  Section: "Pink",
+  "ID No": "10005",
+  Address: "House #10, Road #6, Australia",
+  Phone: "+ 88 98568888418"
+}
