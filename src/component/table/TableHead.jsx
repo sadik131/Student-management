@@ -1,7 +1,7 @@
 const TableHead = ({ headers, children ,className}) => {
   return (
     <div className={`overflow-x-auto w-full ${className}`}>
-      <table className="w-full min-w-max divide-y divide-gray-200 text-sm text-left">
+      <table className="w-full min-w-max divide-y divide-gray-200 text-sm text-left border border-[#e1e1e1]">
         <thead className="bg-gray-100">
           <tr>
             {headers.map((header, index) => (
@@ -14,7 +14,7 @@ const TableHead = ({ headers, children ,className}) => {
             ))}
           </tr>
         </thead>
-        <tbody className="divide-y divide-gray-100">{children}</tbody>
+        <tbody className="divide-y divide-[#e1e1e1]">{children}</tbody>
       </table>
     </div>
   );

@@ -3,7 +3,7 @@ import { FaCaretUp } from "react-icons/fa";
 
 
 
-const ClassSelect = ({ type, value, option, padding = "px-4 py-3" ,placeholder}) => {
+const ClassSelect = ({ type, value, option, padding = "px-4" ,placeholder}) => {
   const [selectedValue, setSelectedValue] = useState(value || '');
   const [searchValue, setSearchValue] = useState('');
   const [filteredOptions, setFilteredOptions] = useState(option);
@@ -51,11 +51,11 @@ const ClassSelect = ({ type, value, option, padding = "px-4 py-3" ,placeholder})
   };
 
   return (
-    <div className="relative px-4 w-full mb-6" ref={wrapperRef}>
+    <div className={`relative lg:${padding} w-full mb-6`} ref={wrapperRef}>
       {type && <label className="block mb-2 text-base font-normal text-secondary">{type}</label>}
 
       <div
-        className={`w-full ${padding} text-[#b4b4b4] flex justify-between items-center bg-[#f0f1f3] rounded-md shadow-sm cursor-pointer `}
+        className={`w-full px-4 py-3 text-[#b4b4b4] flex justify-between items-center bg-[#f0f1f3] rounded-md shadow-sm cursor-pointer `}
         onClick={handleDropdownClick}
       >
         {placeholder || 'Please Select Class *'}

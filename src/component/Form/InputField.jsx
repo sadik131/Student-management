@@ -1,7 +1,7 @@
 
 function Input({ lable, type, placeholder, bgColor="bg-bg", value , padding="px-4" }) {
     return (
-        <div className={`w-full md:${padding} md:mb-6`}>
+        <div className={`w-full md:${padding} mb-6`}>
             <label className="block mb-2 text-base font-normal text-secondary">{lable}</label>
             <input
                 value={value}

@@ -16,7 +16,7 @@ function Sidebar() {
 
 
     return (
-        <div className={`${toggle ? "lg:w-1/5" : "w-10"} h-screen bg-[#042954] font-roboto transition-all duration-300 ease-in-out`} >
+        <div className={`${toggle ? "lg:w-1/5" : "w-10"} bg-[#042954] font-roboto transition-all duration-300 ease-in-out`} >
             {/* top logo */}
             <div className='flex w-full justify-between items-center p-3 bg-gradient-to-r from-[#ff9d01] to-[#ffaa01]'>
                 {toggle && <div className=''>
@@ -42,7 +42,7 @@ function Sidebar() {
                         <MdDashboard className='text-xl' />
                         {toggle && <Link to={"/"} className='text-sm font-semibold'>Student</Link>}
                     </span>
-                    {toggle && <FaAngleRight />}
+                    {toggle && <FaAngleRight className={`transition-transform duration-300 ${showStudentSubmenu  ? "rotate-90" : ""}`} />}
                 </div>
 
                 {/* Sub Menu Items for student */}
@@ -69,9 +69,9 @@ function Sidebar() {
                 {/* Sub Menu Items */}
                 {toggle && showSubmenu && (
                     <div className="flex flex-col gap-1 text-sm w-full">
-                        <Link to={"/add-teacher"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' /> Add Teacher</Link>
                         <Link to={"/all-teacher"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' /> All Teachers</Link>
                         <Link to={"/teacher-details"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' />Teacher Details</Link>
+                        <Link to={"/add-teacher"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' /> Add Teacher</Link>
                         <Link to={"/payment"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' />Payment</Link>
                     </div>
                 )}
@@ -92,9 +92,9 @@ function Sidebar() {
                 {toggle && showStudentSubmenu && (
                     <div className="flex flex-col gap-1 text-sm w-full">
                         <Link to={"/all-student"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' /> All Student</Link>
-                        <Link to={"/"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' /> Student Details</Link>
-                        <Link to={"/"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' />Admission Form</Link>
-                        <Link to={"/"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' />Student Promotion</Link>
+                        <Link to={"/student-details"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' /> Student Details</Link>
+                        <Link to={"/admission"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' />Admission Form</Link>
+                        <Link to={"/promotion"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' />Student Promotion</Link>
                     </div>
                 )}
 
@@ -112,10 +112,10 @@ function Sidebar() {
                 {/* Sub Menu Items */}
                 {toggle && showSubmenu && (
                     <div className="flex flex-col gap-1 text-sm w-full">
-                        <Link to={"/"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' /> Add Teacher</Link>
-                        <Link to={"/"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' /> All Teachers</Link>
-                        <Link to={"/"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' />Teacher Details</Link>
-                        <Link to={"/"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' />Payment</Link>
+                        <Link to={"/all-teacher"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' /> All Teachers</Link>
+                        <Link to={"/teacher-details"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' />Teacher Details</Link>
+                        <Link to={"/add-teacher"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' /> Add Teacher</Link>
+                        <Link to={"/payment"} className="py-2  w-full pl-[60px] items-center pr-5 inline-flex cursor-pointer hover:text-yellow-400 "><FaAngleRight className='mr-1' />Payment</Link>
                     </div>
                 )}
             </ div>

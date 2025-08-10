@@ -14,7 +14,8 @@ export default {
         textColor: '#111',
         secondary: "#646464",
         LightYellow: '#eab308',
-        LightBlue: '#1e3a8a',
+        darkYellow: '#ffae10',
+        lightBlue: '#1e3a8a',
       }
     },
   },

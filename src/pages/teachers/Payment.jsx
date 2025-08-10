@@ -2,38 +2,37 @@ import React, { useState } from 'react'
 import Layout from '../../component/layout/Layout'
 import TableHead from '../../component/table/TableHead'
 import TableRow from '../../component/table/TableRow'
-import { studentTh, StudentData } from '../Data'
+import { PaymentData, PaymentTh } from '../Data'
 import SearchInput from '../../component/Form/SearchInput'
 
-function AllStudent() {
-    const [roll, setRoll] = useState('');
+function Payment() {
+    const [id, setId] = useState('');
     const [name, setName] = useState('');
-    const [classes, setClasses] = useState('');
+    const [phone, setPhone] = useState('');
 
-    const filteredData = StudentData.filter(item => {
+    const filteredData = PaymentData.filter(item => {
         return (
-            item.Clss.toLowerCase().includes(roll.toLowerCase()) &&
-            item.Name.toLowerCase().includes(name.toLowerCase()) &&
-            item.Clss.includes(classes)
+            item.roll.toLowerCase().includes(id.toLowerCase()) &&
+            item.name.toLowerCase().includes(name.toLowerCase()) &&
+            item.phone.includes(phone)
         );
     });
 
     return (
         <>
-            <Layout heading="Student">
+            <Layout heading="All Teachers Payment History">
                 <div className='bg-white pt-4 px-8 pb-8 mb-8 rounded'>
                     {/* top */}
                     <div className='flex items-center justify-between mb-3'>
                         <h3 className='heading'>Add New Students</h3>
-                            <h4 className="text-4xl text-[#bcbcbc] pb-4">...</h4>
+                        <h4 className='text-4xl pb-4 text-[#bcbcbc] pb-4'>...</h4>
                     </div>
-
                     <div className='w-full overflow-x-hidden'>
                         <div className="flex flex-col lg:flex-row gap-4 mb-6">
                             <SearchInput
                                 placeholder="Search by ID..."
-                                value={roll}
-                                onChange={(e) => setRoll(e.target.value)}
+                                value={id}
+                                onChange={(e) => setId(e.target.value)}
                             />
                             <SearchInput
                                 placeholder="Search by Name..."
@@ -41,30 +40,29 @@ function AllStudent() {
                                 onChange={(e) => setName(e.target.value)}
                             />
                             <SearchInput
-                                placeholder="Search by Class..."
-                                value={classes}
-                                onChange={(e) => setClasses(e.target.value)}
+                                placeholder="Search by Phone..."
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)}
                             />
                             <button className="bg-darkYellow uppercase text-white text-sm p-[10px] rounded">
                                 SEARCH
                             </button>
                         </div>
-                        <TableHead headers={studentTh}>
+                        <TableHead headers={PaymentTh}>
                             {filteredData.map((item, index) => (
                                 <TableRow
                                     key={index}
                                     index={index}
                                     data={item}
-                                    view={false}
                                 />
                             ))}
                         </TableHead>
                     </div>
-
                 </div>
+
             </Layout>
         </>
     )
 }
 
-export default AllStudent
+export default Payment

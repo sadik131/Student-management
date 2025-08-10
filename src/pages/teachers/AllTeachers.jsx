@@ -2,32 +2,32 @@ import React, { useState } from 'react'
 import Layout from '../../component/layout/Layout'
 import TableHead from '../../component/table/TableHead'
 import TableRow from '../../component/table/TableRow'
-import { studentTh, StudentData } from '../Data'
+import { TeacherData, TeacherTh } from '../Data'
 import SearchInput from '../../component/Form/SearchInput'
 
-function AllStudent() {
+function AllTeachers() {
     const [roll, setRoll] = useState('');
     const [name, setName] = useState('');
-    const [classes, setClasses] = useState('');
+    const [phone, setPhone] = useState('');
 
-    const filteredData = StudentData.filter(item => {
+    const filteredData = TeacherData.filter(item => {
         return (
-            item.Clss.toLowerCase().includes(roll.toLowerCase()) &&
+            item.Id.toLowerCase().includes(roll.toLowerCase()) &&
             item.Name.toLowerCase().includes(name.toLowerCase()) &&
-            item.Clss.includes(classes)
+            item.Phon.includes(phone)
         );
     });
 
     return (
         <>
-            <Layout heading="Student">
+            <Layout heading="Teachers">
+
                 <div className='bg-white pt-4 px-8 pb-8 mb-8 rounded'>
                     {/* top */}
                     <div className='flex items-center justify-between mb-3'>
-                        <h3 className='heading'>Add New Students</h3>
-                            <h4 className="text-4xl text-[#bcbcbc] pb-4">...</h4>
+                        <h3 className='heading'>All Teachers Data</h3>
+                        <h4 className='text-4xl pb-4 text-[#bcbcbc] pb-4'>...</h4>
                     </div>
-
                     <div className='w-full overflow-x-hidden'>
                         <div className="flex flex-col lg:flex-row gap-4 mb-6">
                             <SearchInput
@@ -41,30 +41,29 @@ function AllStudent() {
                                 onChange={(e) => setName(e.target.value)}
                             />
                             <SearchInput
-                                placeholder="Search by Class..."
-                                value={classes}
-                                onChange={(e) => setClasses(e.target.value)}
+                                placeholder="Search by Phone..."
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)}
                             />
                             <button className="bg-darkYellow uppercase text-white text-sm p-[10px] rounded">
                                 SEARCH
                             </button>
                         </div>
-                        <TableHead headers={studentTh}>
+                        <TableHead headers={TeacherTh}>
                             {filteredData.map((item, index) => (
                                 <TableRow
                                     key={index}
                                     index={index}
                                     data={item}
-                                    view={false}
                                 />
                             ))}
                         </TableHead>
                     </div>
-
                 </div>
+
             </Layout>
         </>
     )
 }
 
-export default AllStudent
+export default AllTeachers

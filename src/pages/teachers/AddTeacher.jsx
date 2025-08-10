@@ -13,7 +13,7 @@ function AddTeacher() {
                     {/* top */}
                     <div className='flex items-center justify-between mb-3'>
                         <h3 className='heading'>Add New Teachers</h3>
-                        <h4 className='text-4xl text-[#bcbcbc]'>...</h4>
+                        <h4 className='text-4xl text-[#bcbcbc] pb-4'>...</h4>
                     </div>
                     {/* Admission Form */}
                     <div className=''>
@@ -52,7 +52,7 @@ function AddTeacher() {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
 
                             <ClassSelect type={"Class *"}
-                                placeholder="Please select gender" option={section} />
+                                placeholder="Please select gender" padding='lg:pr-4' option={section} />
                             <ClassSelect type={"Section  *"} placeholder="Please select gender" option={section} />
                             <Input
                                 lable="Address"
@@ -64,10 +64,10 @@ function AddTeacher() {
                             />
                         </div>
                         {/* 5th field */}
-                        <div className='grid grid-cols-2'>
+                        <div className='grid grid-cols-1 lg:grid-cols-2'>
                             <div className='mb-6 '>
                                 <label className="block mb-2 text-base font-normal text-secondary">Short BIO</label>
-                                <textarea className='bg-[#f0f1f3] w-full px-4 py-1 rounded-md focus:outline-none col-span-2' name="" id=""></textarea>
+                                <textarea className='bg-[#f0f1f3] h-28 w-full px-4 py-1 rounded-md focus:outline-none col-span-2' name="" id=""></textarea>
                             </div>
                             <div className="mt-4 lg:pl-4   ">
                                 <label className="block mb-2 font-medium">Upload Student Photo (150px X 150px)</label>

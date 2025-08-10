@@ -11,7 +11,7 @@ function StudentPromotion() {
           {/* top */}
           <div className='flex items-center justify-between mb-3'>
             <h3 className='heading'>Search Student Promotion</h3>
-            <h4 className='text-4xl text-[#bcbcbc]'>...</h4>
+            <h4 className='text-4xl text-[#bcbcbc] pb-4'>...</h4>
           </div>
           {/* Admission Form */}
           <div className=''>

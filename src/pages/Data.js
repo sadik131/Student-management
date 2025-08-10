@@ -12,6 +12,115 @@ export const studentTh = [
   "E-mail",
 ];
 
+export const TeacherTh = [
+  "Id",
+  "Photo",
+  "Name",
+  "Gender",
+  "Class",
+  "Subject",
+  "Address",
+  "Phon",
+  "E-mail",
+];
+export const PaymentTh = [
+  "Roll",
+  "Photo",
+  "Name",
+  "Gender",
+  "Class",
+  "Subject",
+  "Amount",
+  "Status",
+  "Phon",
+  "E-mail",
+];
+
+export const PaymentData = [
+  {
+    roll: "101",
+    Photo: "https://randomuser.me/api/portraits/men/32.jpg",
+    name: "John Doe",
+    gender: "Male",
+    class: "10",
+    subject: "Math",
+    amount: "$120",
+    status: "Paid",
+    phone: "0123456789",
+    email: "john@example.com",
+  },
+  {
+    roll: "102",
+    Photo: "https://randomuser.me/api/portraits/women/44.jpg",
+    name: "Jane Smith",
+    gender: "Female",
+    class: "9",
+    subject: "Science",
+    amount: "$100",
+    status: "Pending",
+    phone: "0987654321",
+    email: "jane@example.com",
+  },
+];
+
+export const TeacherData = [
+  {
+    Id: "10005",
+    Photo: "https://randomuser.me/api/portraits/men/11.jpg", 
+    Name: "Steven Johnson",
+    Gender: "Male",
+    Class: "2",
+    Subject: "English",
+    Address: "House #10, Road #6, Australia",
+    Phon: "+88 98568888418",
+    "E-mail": "stevenjohnson@gmail.com"
+  },
+  {
+    Id: "10006",
+    Photo: "https://randomuser.me/api/portraits/women/21.jpg",
+    Name: "Sarah Smith",
+    Gender: "Female",
+    Class: "3",
+    Subject: "Mathematics",
+    Address: "House #25, Road #12, Sydney",
+    Phon: "+88 98567777321",
+    "E-mail": "sarahsmith@edu.com"
+  },
+  {
+    Id: "10007",
+    Photo: "https://randomuser.me/api/portraits/men/31.jpg",
+    Name: "Robert Brown",
+    Gender: "Male",
+    Class: "4",
+    Subject: "Science",
+    Address: "Flat #5B, Tower #2, Melbourne",
+    Phon: "+88 98565554321",
+    "E-mail": "robertb@school.edu"
+  },
+  {
+    Id: "10008",
+    Photo: "https://randomuser.me/api/portraits/women/41.jpg",
+    Name: "Emily Wilson",
+    Gender: "Female",
+    Class: "1",
+    Subject: "Arts",
+    Address: "House #8, Lane #5, Brisbane",
+    Phon: "+88 98563332211",
+    "E-mail": "emily.wilson@arts.edu"
+  },
+  {
+    Id: "10009",
+    Photo: "https://randomuser.me/api/portraits/men/51.jpg",
+    Name: "Michael Lee",
+    Gender: "Male",
+    Class: "5",
+    Subject: "Physical Education",
+    Address: "Unit #12, Complex #3, Perth",
+    Phon: "+88 98561112233",
+    "E-mail": "michael.lee@pe.edu"
+  }
+];
+
 
 export const StudentData = [
   {

@@ -7,6 +7,8 @@ import AdmissionForm from "./pages/students/AdmissionForm"
 import StudentPromotion from "./pages/students/StudentPromotion"
 import AddTeacher from "./pages/teachers/AddTeacher"
 import TeacherDetail from "./pages/teachers/TeacherDetails"
+import AllTeachers from "./pages/teachers/AllTeachers"
+import Payment from "./pages/teachers/Payment"
 
 function App() {
 
@@ -21,7 +23,9 @@ function App() {
           <Route path="/admission" element={<AdmissionForm />}></Route>
           <Route path="/promotion" element={<StudentPromotion />}></Route>
           <Route path="/add-teacher" element={<AddTeacher />}></Route>
+          <Route path="/all-teacher" element={<AllTeachers />}></Route>
           <Route path="/teacher-details" element={<TeacherDetail />}></Route>
+          <Route path="/payment" element={<Payment />}></Route>
         </Routes>
       </div>
     </>
